@@ -1,6 +1,6 @@
 {
   "name": "pd-signature",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom web component that can be used in web applications or websites. It provides a signature pad for a user to sign.",
   "main": "pd-signature.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/petergd/pd-signature.git"
+    "url": "https://github.com/petergd/pd-signature.git"
   },
   "keywords": [
     "Web",

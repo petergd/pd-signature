@@ -3,7 +3,7 @@
 A signature pad custom web component that can be used in web applications or websites.
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-signature)
 
-[Demo page (by unpkg.com)](https://unpkg.com/pd-signature@1.0.0/pd-signature.html)
+[Demo page (by unpkg.com)](https://unpkg.com/pd-signature@1.0.1/pd-signature.html)
 
 ## Getting Started
 
@@ -25,25 +25,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 #### pd-signature
 
-_**signatures**_
+_**sRoot**_
 
-_✓ Checks that signatures is an empty object upon initialization._
+_✓ Checks that component is attached to DOM._
 
-_**direction**_
+_✓ Checks that it should fail if appendToSave is missing,_
 
-_✓ Checks that direction has default value._
-
-_**searchFor**_
-
-_✓ Checks that searchFor attribute has default value "article"._
+_✓ Checks that it should fail if appendToSave=""._
 
 _**sRoot**_
 
-_✓ Checks that component is attached to DOM and is equal to <pd-signature>_
+_✓ Checks that component is attached to DOM and has empty innerHTML and has all it's attributes empty._
 
-_**sRoot**_
+_✓ Checks that component is attached to DOM and has a valid appendToWhenSave attribute._
 
-_✓ Checks that component is attached to DOM and has empty innerHTML_
+_✓ Checks that component is attached to DOM and has a valid buttonsColor attribute._
+
+_✓ Checks that component is attached to DOM and has a valid buttonsBgColor attribute._
+
+_✓ Checks that component is attached to DOM and has a valid lineWidth attribute._
+
+_✓ Checks that component is attached to DOM and has a valid lineColor attribute._
+
+_✓ Checks that component is attached to DOM and has a valid header attribute._
+
+_✓ Checks that component is attached to DOM and has a valid footer attribute._
 
 ##### Array
 
@@ -58,12 +64,12 @@ Add the custom element tag to your HTML page.
 
 The element's parameters are:
 
- - **append-to-when-save** (string). Set the DOM element that the produced Image will be appended. 
- - **buttons-color** (string - default `#ffffff`). Buttons color.
- - **buttons-bgcolor** (string - default `#ffffff`). Buttons background color.
- - **hide-on-exit** (string). Set the DOM element that will be hidden upon click of `Exit` button.
- - **line-color** (string - default `#000000`).Line color that will be used for drawing at the signature pad.
- - **line-width** (string - default `10`). Line width that will be used for drawing at the signature pad.
+ - **appendToWhenSave** (string). Set the DOM element that the produced Image will be appended. 
+ - **buttonsColor** (string - default `#ffffff`). Buttons color.
+ - **buttonsBgColor** (string - default `#ffffff`). Buttons background color.
+ - **hideOnExit** (string). Set the DOM element that will be hidden upon click of `Exit` button.
+ - **lineColor** (string - default `#000000`).Line color that will be used for drawing at the signature pad.
+ - **lineWidth** (string - default `10`). Line width that will be used for drawing at the signature pad.
  - **header** (string). Set signature pad header.
  - **footer** (string). Set signature pad footer.
 **Basic Usage**
@@ -115,7 +121,7 @@ The element's parameters are:
 
 ***Example HTML***
 
-	<div is="pd-signature" append-to-when-save="#output" buttons-color="#faaeaa" buttons-bgcolor="#850203" line-width="3" line-color="#00ff00" header="PD-SIGNATURE" footer="A simple signature pad web component, for mobile and desktop devices!"></div>
+	<div is="pd-signature" appendToWhenSave="#output" buttonsColor="#faaeaa" buttonsBgColor="#850203" lineWidth="3" lineColor="#00ff00" header="PD-SIGNATURE" footer="A simple signature pad web component, for mobile and desktop devices!"></div>
 	<div id="output"></div>
 
 You can change the element's attributes/appearance by using Javascript, for example:
